@@ -1,12 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="jp">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Example Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Wataru Nuruki's Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+
 </head>
+
 <body>
-    <h1>Hello GitHub.io !</h1>
+  <div class = tabTest> 
+    <p id="tabcontrol">
+      <a href="#tabpage1">Top</a>
+      <a href="#tabpage2">Skills</a>
+      <a href="#tabpage3">Works</a>
+   </p>
+  </div>
+  <div id="tabbody">
+    <div id="tabpage1"> 
+       <!-- Topページ -->
+      <section id="top" class="page fullScreen">
+        <canvas id="topCanvas"></canvas>
+      </section>
+    </div>
+    <div id="tabpage2">…… タブ2の中身 ……</div>
+    <div id="tabpage3">…… タブ3の中身 ……</div>
+ </div>
+
+
+
+  <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

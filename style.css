@@ -1,0 +1,70 @@
+
+@charset 'utf-8';
+
+.tabTest{
+    width:100%;
+    text-align: center;
+    color:black;
+ }
+ 
+ /* ▼タブ */
+ #tabcontrol a {
+    display: inline-block;            /* インラインブロック化 */
+    padding: 0.75em 1em;              /* 内側の余白 */
+    text-decoration: none;            /* リンクの下線を消す */
+    color: black;                     /* 文字色：黒色 */
+    background-color: white;          /* 背景色：白色 */
+    font-weight: bold;                /* 太字 */
+    font-size: large;
+    position: relative;               /* JavaScriptでz-indexを調整するために必要 */
+ }
+
+body,
+div,
+section,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 200px;
+  padding-right: 200px;
+  transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.page{
+  padding: 40px 0
+}
+
+.page .body {
+  padding-left: 50px
+}
+
+.page {
+  line-height: 1.7
+}
+
+.fullScreen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0
+}
+
+#topCanvas {
+  display: block;
+  width: 980px;
+  height: 600px
+}
