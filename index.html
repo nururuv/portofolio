@@ -10,26 +10,53 @@
 </head>
 
 <body>
-  <div class = tabTest> 
-    <p id="tabcontrol">
-      <a href="#tabpage1">Top</a>
-      <a href="#tabpage2">Skills</a>
-      <a href="#tabpage3">Works</a>
-   </p>
+  <div class="panel">
+    <!--タブ-->
+    <ul class="tab-group">
+      <p class="tab tab-A is-active">Top</p>　
+      <!-- is-activeがポイント -->
+      <p class="tab tab-B">Skills</p>
+      <p class="tab tab-C">Works</p>
+    </ul>
   </div>
-  <div id="tabbody">
-    <div id="tabpage1"> 
-       <!-- Topページ -->
-      <section id="top" class="page fullScreen">
+
+
+  <!--タブを切り替えて表示するコンテンツ-->
+  <div class="content-group">
+    <div class="content tab-A is-show">
+      <!-- Topページ -->
         <canvas id="topCanvas"></canvas>
-      </section>
-    </div>
-    <div id="tabpage2">…… タブ2の中身 ……</div>
-    <div id="tabpage3">…… タブ3の中身 ……</div>
- </div>
+    </div> <!-- is-showがポイント -->
 
+    <div class="content tab-B">コンテンツ-2</div>
+    <div class="content tab-C">コンテンツ-3</div>
+    　　　　　
+    <!--is-showだけ表示、他は非表示という形にします。-->
+  </div>
 
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+      // タブに対してクリックイベントを適用
+      const tabs = document.getElementsByClassName('tab'); //ノードを取得
+      for (let i = 0; i < tabs.length; i++) { //繰返し構文で全てに適用
+        tabs[i].addEventListener('click', tabSwitch);
+      }
+
+      // タブをクリックすると実行する関数
+      function tabSwitch() {
+        // タブのclassの値を変更
+        document.getElementsByClassName('is-active')[0].classList.remove('is-active'); //is-activeの追加
+        this.classList.add('is-active'); //is-activeの削除
+        // コンテンツのclassの値を変更
+        document.getElementsByClassName('is-show')[0].classList.remove('is-show');
+        const arrayTabs = Array.prototype.slice.call(tabs); //引数にとったオブジェクトを配列に変換してくれます。
+        const index = arrayTabs.indexOf(this); //配列に対してだけ使い、DOMを引数にとって一致した要素番号を戻します。
+        document.getElementsByClassName('content')[index].classList.add('is-show');
+      };
+    });
+  </script>
 
   <script type="text/javascript" src="main.js"></script>
 </body>
+
 </html>
