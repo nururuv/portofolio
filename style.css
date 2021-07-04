@@ -19,13 +19,7 @@
     position: relative;               /* JavaScriptでz-indexを調整するために必要 */
  }
 
-body,
-div,
-section,
-p {
-  margin: 0;
-  padding: 0;
-}
+
 
 #topCanvas {
   display: block;
@@ -44,3 +38,169 @@ p {
 .content.is-show{ /*panelを上書きしてこれだけ表示させます*/
   display:block;
 }
+
+.content-group{
+background-color: #f3f3f3;
+}
+
+/*--------------------------------
+　Section
+---------------------------------*/
+
+.section .inner {
+    /* padding: 80px 10px; */
+    padding: 80px 10px 10px 0px;
+  }
+  
+  .section .section-title-block {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .section .section-title {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: -0.01em;
+    display: inline-block;
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  .section .section-desc {
+    text-align: center;
+  }
+  
+  .two-column-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  
+  .two-column-image {
+    width: 33%;
+  }
+  
+  .two-column-image img {
+    margin: 0 auto;
+  }
+  
+  .two-column-desc {
+    width: 62%;
+  }
+
+/*--------------------------------
+ SKILL
+---------------------------------*/
+
+#skill .card-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  
+  #skill .card {
+    flex-basis: 46%;
+    margin-bottom: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  
+  #skill .card:first-child {
+    flex-basis: 100%;
+  }
+  
+  #skill .skill-icon {
+    flex-basis: 75px;
+  }
+  
+  #skill .skill-icon img {
+    width: 75px;
+  }
+  
+  #skill .skill-desc {
+    flex-basis: calc(100% - 75px - 30px);
+    text-align: center;
+  }
+  
+  #skill .skill-desc-title {
+    margin-bottom: 3px;
+    font-size:26px;
+    padding: 24px;
+    font-weight: bold;
+  }
+  
+  #skill .skill-desc-title i{
+    margin-right: 12px;
+  }
+  
+  #skill .rate {
+    position: relative;
+    display: inline-block;
+    width: 110px;
+    height: 20px;
+    font-size: 20px;
+  }
+  
+  #skill .rate:before, #skill .rate:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '★★★★★';
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+  }
+  
+  #skill .rate:before {
+    color: #ddd;
+  }
+  
+  #skill .rate:after {
+    color: #808080;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  #skill .rate1:after {
+    width: 20px;
+  }
+  
+  #skill .rate2:after {
+    width: 40px;
+  }
+  
+  #skill .rate3:after {
+    width: 60px;
+  }
+  
+  #skill .rate4:after {
+    width: 80px;
+  }
+  
+  #skill .rate5:after {
+    width: 100px;
+  }
+  

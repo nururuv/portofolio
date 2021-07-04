@@ -2,61 +2,304 @@
 <html lang="jp">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Wataru Nuruki's Portfolio</title>
+    <meta charset="UTF-8">
+    <title>Wataru Nuruki's Portfolio</title>
 
-  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
 
 </head>
 
 <body>
-  <div class="panel">
-    <!--タブ-->
-    <ul class="tab-group">
-      <p class="tab tab-A is-active">Top</p>　
-      <!-- is-activeがポイント -->
-      <p class="tab tab-B">Skills</p>
-      <p class="tab tab-C">Works</p>
-    </ul>
-  </div>
+    <div class="panel">
+        <!--タブ-->
+        <ul class="tab-group">
+            <p class="tab tab-A is-active">Top</p>　
+            <!-- is-activeがポイント -->
+            <p class="tab tab-B">Skills</p>
+            <p class="tab tab-C">Works</p>
+        </ul>
+    </div>
 
 
-  <!--タブを切り替えて表示するコンテンツ-->
-  <div class="content-group">
-    <div class="content tab-A is-show">
-      <!-- Topページ -->
-        <canvas id="topCanvas"></canvas>
-    </div> <!-- is-showがポイント -->
+    <!--タブを切り替えて表示するコンテンツ-->
+    <div class="content-group">
+        <div class="content tab-A is-show">
+            <!-- Topページ -->
+            <canvas id="topCanvas"></canvas>
+        </div> <!-- is-showがポイント -->
 
-    <div class="content tab-B">コンテンツ-2</div>
-    <div class="content tab-C">コンテンツ-3</div>
-    　　　　　
-    <!--is-showだけ表示、他は非表示という形にします。-->
-  </div>
+        <div class="content tab-B">
+            <section class="section" id="skill">
+                <div class="inner">
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="skill-desc">
+                                <h3 class="skill-desc-title"><i class="fas fa-desktop"></i>フロントエンド</h3>
+                                <p>一言コメント</p>
+                                <table class="table table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">技術</th>
+                                            <th scope="col">経験年数</th>
+                                            <th scope="col">スキル</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">HTML5</th>
+                                            <td>0年</td>
+                                            <td><span class="rating">
+                                                    <p class="rate rate2"></p>
+                                                </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">CSS3</th>
+                                            <td>0年</td>
+                                            <td><span class="rating">
+                                                    <p class="rate rate2"></p>
+                                                </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">JavaScript</th>
+                                            <td>0年</td>
+                                            <td><span class="rating">
+                                                    <p class="rate rate2"></p>
+                                                </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">jQuery</th>
+                                            <td>0年</th>
+                                            <td><span class="rating">
+                                                    <p class="rate rate1"></p>
+                                                </span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
 
-  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function () {
-      // タブに対してクリックイベントを適用
-      const tabs = document.getElementsByClassName('tab'); //ノードを取得
-      for (let i = 0; i < tabs.length; i++) { //繰返し構文で全てに適用
-        tabs[i].addEventListener('click', tabSwitch);
-      }
+                        <div class="card">
+                            <div class="skill-desc">
+                                <h3 class="skill-desc-title"><i class="fas fa-desktop"></i>バックエンド</h3>
+                                <p>一言コメント</p>
+                                <table class="table table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">技術</th>
+                                            <th scope="col">経験年数</th>
+                                            <th scope="col">スキル</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Java</th>
+                                            <td>1年</td>
+                                            <td><span class="rating">
+                                                    <p class="rate rate4"></p>
+                                                </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">C＃</th>
+                                            <td>1年</td>
+                                            <td><span class="rating">
+                                                    <p class="rate rate3"></p>
+                                                </span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
 
-      // タブをクリックすると実行する関数
-      function tabSwitch() {
-        // タブのclassの値を変更
-        document.getElementsByClassName('is-active')[0].classList.remove('is-active'); //is-activeの追加
-        this.classList.add('is-active'); //is-activeの削除
-        // コンテンツのclassの値を変更
-        document.getElementsByClassName('is-show')[0].classList.remove('is-show');
-        const arrayTabs = Array.prototype.slice.call(tabs); //引数にとったオブジェクトを配列に変換してくれます。
-        const index = arrayTabs.indexOf(this); //配列に対してだけ使い、DOMを引数にとって一致した要素番号を戻します。
-        document.getElementsByClassName('content')[index].classList.add('is-show');
-      };
-    });
-  </script>
+                        <div class="card">
+                            <div class="skill-desc">
+                                <h3 class="skill-desc-title"><i class="fas fa-database"></i>DB</h3>
+                                <p>一言コメント</p>
+                                <table class="table table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">技術</th>
+                                            <th scope="col">経験年数</th>
+                                            <th scope="col">スキル</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">SQLServer</th>
+                                            <td>1年</td>
+                                            <td><span class="rating">
+                                                    <p class="rate rate3"></p>
+                                                </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">MySQL</th>
+                                            <td>1年</td>
+                                            <td><span class="rating">
+                                                    <p class="rate rate3"></p>
+                                                </span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
 
-  <script type="text/javascript" src="main.js"></script>
+                        <div class="card">
+                            <div class="skill-desc">
+                                <h3 class="skill-desc-title"><i class="fas fa-server"></i>インフラ・サーバー</h3>
+                                <p>一言コメント</p>
+                                <table class="table table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">技術</th>
+                                            <th scope="col">経験年数</th>
+                                            <th scope="col">スキル</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">XXXXXX</th>
+                                            <td>X年</td>
+                                            <td><span class="rating">
+                                                    <p class="rate rate0"></p>
+                                                </span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="skill-desc">
+                                <h3 class="skill-desc-title"><i class="fas fa-toolbox"></i>その他</h3>
+                                <p>開発等で使用したツールやFWです。</p>
+                                <table class="table table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">技術</th>
+                                            <th scope="col">経験年数</th>
+                                            <th scope="col">スキル</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Eclipse</th>
+                                            <td>1年</td>
+                                            <td><span class="rating">
+                                                    <p class="rate rate4"></p>
+                                                </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">VisualStudio</th>
+                                            <td>0年</td>
+                                            <td><span class="rating">
+                                                    <p class="rate rate2"></p>
+                                                </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">VSCode</th>
+                                            <td>0年</td>
+                                            <td><span class="rating">
+                                                    <p class="rate rate2"></p>
+                                                </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Unity</th>
+                                            <td>0年</td>
+                                            <td><span class="rating">
+                                                    <p class="rate rate3"></p>
+                                                </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">git</th>
+                                            <td>0年</td>
+                                            <td><span class="rating">
+                                                    <p class="rate rate3"></p>
+                                                </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">SQL Server Management Studio</th>
+                                            <td>0年</td>
+                                            <td><span class="rating">
+                                                    <p class="rate rate3"></p>
+                                                </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">A5M2</th>
+                                            <td>0年</td>
+                                            <td><span class="rating">
+                                                    <p class="rate rate3"></p>
+                                                </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">MySQL Workbench</th>
+                                            <td>0年</td>
+                                            <td><span class="rating">
+                                                    <p class="rate rate3"></p>
+                                                </span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="skill-desc">
+                                <h3 class="skill-desc-title"><i class="fas fa-list-alt"></i>保有資格</h3>
+                                <p>一言コメント</p>
+                                <table class="table table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">資格</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">ITパスポート</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Java SE11 Silver</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">TOEIC 845点</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+        <div class="content tab-C">コンテンツ-3</div>
+        　　　　　
+        <!--is-showだけ表示、他は非表示という形にします。-->
+    </div>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            // タブに対してクリックイベントを適用
+            const tabs = document.getElementsByClassName('tab'); //ノードを取得
+            for (let i = 0; i < tabs.length; i++) { //繰返し構文で全てに適用
+                tabs[i].addEventListener('click', tabSwitch);
+            }
+
+            // タブをクリックすると実行する関数
+            function tabSwitch() {
+                // タブのclassの値を変更
+                document.getElementsByClassName('is-active')[0].classList.remove('is-active'); //is-activeの追加
+                this.classList.add('is-active'); //is-activeの削除
+                // コンテンツのclassの値を変更
+                document.getElementsByClassName('is-show')[0].classList.remove('is-show');
+                const arrayTabs = Array.prototype.slice.call(tabs); //引数にとったオブジェクトを配列に変換してくれます。
+                const index = arrayTabs.indexOf(this); //配列に対してだけ使い、DOMを引数にとって一致した要素番号を戻します。
+                document.getElementsByClassName('content')[index].classList.add('is-show');
+            };
+        });
+    </script>
+
+    <script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>
