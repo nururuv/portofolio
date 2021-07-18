@@ -1,75 +1,87 @@
-
 @charset 'utf-8';
+* {
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    background-color: #f3f3f3;
+    box-sizing: border-box;
+}
 
-.tab-group{
-    width:100%;
+.tab-group {
+    box-sizing: border-box;
+    width: auto;
     text-align: center;
-    color:black;
- }
+    color: black;
+}
 
- /* ▼タブ */
- .tab {
-    display: inline-block;            /* インラインブロック化 */
-    padding: 0.75em 1em;              /* 内側の余白 */
-    text-decoration: none;            /* リンクの下線を消す */
-    color: black;                     /* 文字色：黒色 */
-    background-color: white;          /* 背景色：白色 */
-    font-weight: bold;                /* 太字 */
+
+/* ▼タブ */
+
+.tab {
+    display: inline-block;
+    /* インラインブロック化 */
+    width: auto;
+    padding: 1rem 1em;
+    /* 内側の余白 */
+    text-decoration: none;
+    /* リンクの下線を消す */
+    color: black;
+    /* 文字色：黒色 */
+    font-weight: bold;
+    /* 太字 */
     font-size: large;
-    position: relative;               /* JavaScriptでz-indexを調整するために必要 */
- }
- 
-
- #topCanvas {
-  display: block;
-  width: 100%;
-  height: 100%
-} 
-
-.content{ /*非表示にさせます*/
-  display:none;
-}
-.tab.is-active{  /*tabを上書きして発火させます*/
-  background:#F00;
-  color:#FFF;
-  transition: all 0.2s ease-out;
-}
-.content.is-show{ /*panelを上書きしてこれだけ表示させます*/
-  display:block;
+    position: relative;
+    /* JavaScriptでz-indexを調整するために必要 */
+    cursor: pointer;
 }
 
-.content-group{
-background-color: #f3f3f3;
+#topCanvas {
+    display: block;
+    width: auto;
 }
+
+.content {
+    /*非表示にさせます*/
+    display: none;
+    width: auto;
+}
+
+.tab.is-active {
+    transition: all 0.2s ease-out;
+}
+
+.content.is-show {
+    /*panelを上書きしてこれだけ表示させます*/
+    display: block;
+    width: auto;
+}
+
 
 /*--------------------------------
 　Section
 ---------------------------------*/
 
 .section .inner {
-    /* padding: 80px 10px; */
+    padding: 80px 10px;
     padding: 80px 10px 10px 0px;
-  }
-  
-  .section  {
+}
+
+.section {
     text-align: center;
     margin-bottom: 30px;
-  }
-  
-  .section  {
+}
+
+.section {
     font-family: 'Oswald', sans-serif;
     letter-spacing: -0.01em;
     display: inline-block;
-    font-size: 56px;
     font-weight: bold;
     margin-bottom: 10px;
     color: #444;
-  }
-  
-  .section .section-desc {
-    text-align: center;
-  }
+}
+
 
 /*--------------------------------
  SKILL
@@ -79,7 +91,6 @@ background-color: #f3f3f3;
     width: 80%;
     margin: 0 auto;
     padding: 20px 0;
-;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -87,9 +98,11 @@ background-color: #f3f3f3;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-  }
-  
-  #skill .card {
+}
+
+#skill .card {
+    text-align: center;
+    background-color: white;
     flex-basis: 46%;
     margin-bottom: 50px;
     display: -webkit-box;
@@ -100,46 +113,38 @@ background-color: #f3f3f3;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-  }
-  
-  /* flexBoxの最初の要素を100%にしているっぽい */
-  /* #skill .card:first-child {
-    flex-basis: 100%;
-  } */
-  
-  #skill .skill-icon {
-    flex-basis: 75px;
-  }
-  
-  #skill .skill-icon img {
-    width: 75px;
-  }
-  
-  #skill .skill-desc {
+    border-style: groove;
+    border-width: 3px;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+#skill .skill-desc {
     flex-basis: calc(100% - 75px - 30px);
     text-align: center;
-  }
-  
-  #skill .skill-desc-title {
+}
+
+#skill .skill-desc-title {
     margin-bottom: 3px;
-    font-size:26px;
+    font-size: 26px;
     padding: 24px;
     font-weight: bold;
-  }
-  
-  #skill .skill-desc-title i{
+}
+
+#skill .skill-desc-title i {
     margin-right: 12px;
-  }
-  
-  #skill .rate {
+}
+
+#skill .rate {
     position: relative;
     display: inline-block;
     width: 110px;
     height: 20px;
     font-size: 20px;
-  }
-  
-  #skill .rate:before, #skill .rate:after {
+}
+
+#skill .rate:before,
+#skill .rate:after {
     position: absolute;
     top: 0;
     left: 0;
@@ -147,35 +152,34 @@ background-color: #f3f3f3;
     display: inline-block;
     height: 20px;
     line-height: 20px;
-  }
-  
-  #skill .rate:before {
+}
+
+#skill .rate:before {
     color: #ddd;
-  }
-  
-  #skill .rate:after {
+}
+
+#skill .rate:after {
     color: #808080;
     overflow: hidden;
     white-space: nowrap;
-  }
-  
-  #skill .rate1:after {
+}
+
+#skill .rate1:after {
     width: 20px;
-  }
-  
-  #skill .rate2:after {
+}
+
+#skill .rate2:after {
     width: 40px;
-  }
-  
-  #skill .rate3:after {
+}
+
+#skill .rate3:after {
     width: 60px;
-  }
-  
-  #skill .rate4:after {
+}
+
+#skill .rate4:after {
     width: 80px;
-  }
-  
-  #skill .rate5:after {
+}
+
+#skill .rate5:after {
     width: 100px;
-  }
-  
+}
